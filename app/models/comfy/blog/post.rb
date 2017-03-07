@@ -7,6 +7,8 @@ class Comfy::Blog::Post < ActiveRecord::Base
   
   has_many :comments,
     :dependent => :destroy
+
+  has_attached_file :image, styles: { medium: "300x300>", thumb: "75x75>" }
   
   # -- Validations ----------------------------------------------------------
   validates :blog_id, :title, :slug, :year, :month, :content,
@@ -14,6 +16,8 @@ class Comfy::Blog::Post < ActiveRecord::Base
   validates :slug,
     :uniqueness => { :scope => [:blog_id, :year, :month] },
     :format => { :with => /\A%*\w[a-z0-9_\-\%]*\z/i }
+
+  validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
   
   # -- Scopes ---------------------------------------------------------------
   default_scope -> {

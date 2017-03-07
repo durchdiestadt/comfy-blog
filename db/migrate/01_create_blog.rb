@@ -19,6 +19,7 @@ class CreateBlog < ActiveRecord::Migration
       t.text      :content
       t.string    :excerpt,       :limit => 1024
       t.string    :author
+      t.attachment :image
       t.integer   :year,          :null => false, :limit => 4
       t.integer   :month,         :null => false, :limit => 2
       t.boolean   :is_published,  :null => false, :default => true
