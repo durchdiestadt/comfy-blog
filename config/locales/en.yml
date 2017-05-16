@@ -18,6 +18,8 @@ en:
         excerpt: Excerpt
         published_at: Published at
         is_published: Is published
+        time_text: Time text (displayed instead of date, e.g. weekly)
+        time_text_placeholder: "%{limit} characters at most"
       comfy/blog/comment:
         author: Author
         email: Email

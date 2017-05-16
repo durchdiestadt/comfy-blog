@@ -18,6 +18,8 @@ de:
         excerpt: Auszug
         published_at: Veröffentlicht am
         is_published: Ist veröffentlicht
+        time_text: Zeitangabe (anstelle des Datums)
+        time_text_placeholder: "Max. %{limit} Zeichen"
       comfy/blog/comment:
         author: Autor
         email: E-Mail

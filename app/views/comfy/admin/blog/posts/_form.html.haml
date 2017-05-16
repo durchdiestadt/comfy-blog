@@ -9,6 +9,7 @@
 = form.text_area :content, :data => {'cms-rich-text' => true}
 = form.text_area :excerpt, :class => 'short'
 = form.text_field :published_at, :value => @post.published_at.try(:to_s, :db), :data => {'cms-datetime' => true}
+= form.text_field :time_text, placeholder: t('activerecord.attributes.comfy/blog/post.time_text_placeholder', limit: @post.column_for_attribute('time_text').limit)
 = form.form_group :is_published do
   = form.check_box :is_published
 
